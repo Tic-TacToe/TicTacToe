@@ -14,7 +14,12 @@ public class Token {
         this.owner = player;
 
     }
+    //getters || setters
 
+
+    public Player getOwner() {
+        return owner;
+    }
 
     //methode
     @Override

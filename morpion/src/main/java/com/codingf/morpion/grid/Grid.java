@@ -128,13 +128,13 @@ public class Grid {
 
     @Override
     public String toString(){
-        StringBuilder builder = new StringBuilder("┌───┬───┬───┐").append(System.lineSeparator());
-        builder.append("│ ").append(this.cases[0]).append(" │ ").append(this.cases[1]).append(" │ ").append(this.cases[2]).append(" │").append(System.lineSeparator());
-        builder.append("├───┼───┼───┤").append(System.lineSeparator());
-        builder.append("│ ").append(this.cases[3]).append(" │ ").append(this.cases[4]).append(" │ ").append(this.cases[5]).append(" │").append(System.lineSeparator());
-        builder.append("├───┼───┼───┤").append(System.lineSeparator());
-        builder.append("│ ").append(this.cases[6]).append(" │ ").append(this.cases[7]).append(" │ ").append(this.cases[8]).append(" │").append(System.lineSeparator());
-        builder.append("└───┴───┴───┘").append(System.lineSeparator());
+        StringBuilder builder = new StringBuilder("╔═══╦═══╦═══╗").append(System.lineSeparator());
+        builder.append("║ ").append(this.cases[0]).append(" ║ ").append(this.cases[1]).append(" ║ ").append(this.cases[2]).append(" ║").append(System.lineSeparator());
+        builder.append("╠═══╬═══╬═══╣").append(System.lineSeparator());
+        builder.append("║ ").append(this.cases[3]).append(" ║ ").append(this.cases[4]).append(" ║ ").append(this.cases[5]).append(" ║").append(System.lineSeparator());
+        builder.append("╠═══╬═══╬═══╣").append(System.lineSeparator());
+        builder.append("║ ").append(this.cases[6]).append(" ║ ").append(this.cases[7]).append(" ║ ").append(this.cases[8]).append(" ║").append(System.lineSeparator());
+        builder.append("╚═══╩═══╩═══╝").append(System.lineSeparator());
 
         return  builder.toString();
 

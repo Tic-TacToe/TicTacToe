@@ -16,10 +16,11 @@ public class GridCase {
 
     public GridCase(int caseId, Token token){
         this.id = caseId;
-        this.content =token;
+        this.content = token;
     }
     // pseudo getters  setters
     public void  setToken(Token token){
+
         this.content= token;
     }
     public Player getTokenOwner(){

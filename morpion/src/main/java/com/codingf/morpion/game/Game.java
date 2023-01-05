@@ -13,6 +13,8 @@ public class Game {
     private Player player2;
     private Player currentPlayer;
 
+
+
     //constructeur
 
     public Game() {
@@ -22,10 +24,13 @@ public class Game {
 
     }
 
+
+
     // methode privé
     private void swapTurn(){
         if (this.currentPlayer.equals(this.player1)){
             this.currentPlayer = this.player2;
+
         }else {
             this.currentPlayer = this.player1;
         }
@@ -52,7 +57,7 @@ public class Game {
     }
 
     public void start(){
-        Player currentPlayer = this.player1;
+        currentPlayer = this.player1;
         Scanner scan  = new Scanner(System.in);
         while (true){
             printGrid();
@@ -64,7 +69,34 @@ public class Game {
             if (this.grid.getWinner() != null){
                 //joueur qui gagne
                 printGrid();
-                System.out.println("joueur"+ this.currentPlayer.getToken() +" a gagner");
+                if (this.currentPlayer.getToken() == this.player1.getToken()){
+                    System.out.println(" ▄▄▄▄▄▄▄▄▄▄▄                                ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄        ▄ \n" +
+                            "▐░░░░░░░░░░░▌                              ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░▌      ▐░▌\n" +
+                            "▐░█▀▀▀▀▀▀▀█░▌                              ▐░▌       ▐░▌ ▀▀▀▀█░█▀▀▀▀ ▐░▌░▌     ▐░▌\n" +
+                            "▐░▌       ▐░▌                              ▐░▌       ▐░▌     ▐░▌     ▐░▌▐░▌    ▐░▌\n" +
+                            "▐░▌       ▐░▌                              ▐░▌   ▄   ▐░▌     ▐░▌     ▐░▌ ▐░▌   ▐░▌\n" +
+                            "▐░▌       ▐░▌                              ▐░▌  ▐░▌  ▐░▌     ▐░▌     ▐░▌  ▐░▌  ▐░▌\n" +
+                            "▐░▌       ▐░▌                              ▐░▌ ▐░▌░▌ ▐░▌     ▐░▌     ▐░▌   ▐░▌ ▐░▌\n" +
+                            "▐░▌       ▐░▌                              ▐░▌▐░▌ ▐░▌▐░▌     ▐░▌     ▐░▌    ▐░▌▐░▌\n" +
+                            "▐░█▄▄▄▄▄▄▄█░▌                              ▐░▌░▌   ▐░▐░▌ ▄▄▄▄█░█▄▄▄▄ ▐░▌     ▐░▐░▌\n" +
+                            "▐░░░░░░░░░░░▌                              ▐░░▌     ▐░░▌▐░░░░░░░░░░░▌▐░▌      ▐░░▌\n" +
+                            " ▀▀▀▀▀▀▀▀▀▀▀                                ▀▀       ▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀        ▀▀ \n" +
+                            "                                                                                  ");
+                }else {
+                    System.out.println(" ▄       ▄                                ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄        ▄ \n" +
+                            "▐░▌     ▐░▌                              ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░▌      ▐░▌\n" +
+                            " ▐░▌   ▐░▌                               ▐░▌       ▐░▌ ▀▀▀▀█░█▀▀▀▀ ▐░▌░▌     ▐░▌\n" +
+                            "  ▐░▌ ▐░▌                                ▐░▌       ▐░▌     ▐░▌     ▐░▌▐░▌    ▐░▌\n" +
+                            "   ▐░▐░▌                                 ▐░▌   ▄   ▐░▌     ▐░▌     ▐░▌ ▐░▌   ▐░▌\n" +
+                            "    ▐░▌                                  ▐░▌  ▐░▌  ▐░▌     ▐░▌     ▐░▌  ▐░▌  ▐░▌\n" +
+                            "   ▐░▌░▌                                 ▐░▌ ▐░▌░▌ ▐░▌     ▐░▌     ▐░▌   ▐░▌ ▐░▌\n" +
+                            "  ▐░▌ ▐░▌                                ▐░▌▐░▌ ▐░▌▐░▌     ▐░▌     ▐░▌    ▐░▌▐░▌\n" +
+                            " ▐░▌   ▐░▌                               ▐░▌░▌   ▐░▐░▌ ▄▄▄▄█░█▄▄▄▄ ▐░▌     ▐░▐░▌\n" +
+                            "▐░▌     ▐░▌                              ▐░░▌     ▐░░▌▐░░░░░░░░░░░▌▐░▌      ▐░░▌\n" +
+                            " ▀       ▀                                ▀▀       ▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀        ▀▀ \n" +
+                            "                                                                                ");
+                }
+
                 break;
             }else if (this.grid.isFull()){
                 // match nul
@@ -77,6 +109,7 @@ public class Game {
         }
         scan.close();
     }
+
 
 
 

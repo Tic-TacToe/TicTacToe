@@ -24,6 +24,6 @@ public class Token {
     //methode
     @Override
     public String toString(){
-        return Character.toString(this.tokenChar);
+        return Character.toString(this.tokenChar );
     }
 }

@@ -7,6 +7,7 @@ public class Grid {
 
     private GridCase[] cases;
 
+
     //constructor
 
     public Grid() {
@@ -47,6 +48,7 @@ public class Grid {
                 if (player.equals((getTokenOwnerOf(2 + row * 3)))){
 
                     winner = player;
+
                     break;
                 }
             }
@@ -63,9 +65,10 @@ public class Grid {
             if (player == null){
                 continue;
             }
-            if (player.equals(getTokenOwnerOf(col + 0 *3 ))){
-                if (player.equals((getTokenOwnerOf(col + 0 * 3)))){
+            if (player.equals(getTokenOwnerOf(col + 1 *3 ))){
+                if (player.equals((getTokenOwnerOf(col + 2 * 3)))){
                     winner = player;
+
                     break;
                 }
             }

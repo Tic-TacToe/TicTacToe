@@ -17,7 +17,7 @@ public class Grid {
 
         for (int i = 0; i <this.cases.length ; i++) {
             if (this.cases[i] == null) {
-                this.cases[i] = new GridCase(i+1);
+                this.cases[i] = new GridCase(i);
             }
 
         }

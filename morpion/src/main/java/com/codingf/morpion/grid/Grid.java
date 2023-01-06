@@ -1,6 +1,8 @@
 package com.codingf.morpion.grid;
 
 import com.codingf.morpion.player.Player;
+import com.codingf.morpion.game.Game;
+
 
 public class Grid {
     //champ
@@ -25,9 +27,9 @@ public class Grid {
 
     private Player getTokenOwnerOf(int id){
         return this.cases[id].getTokenOwner();
-
-
     }
+
+
 
     public void setCaseToken(int caseId, Token token){
         this.cases[caseId].setToken(token);
@@ -77,6 +79,11 @@ public class Grid {
     }
 
     //methode
+
+    public boolean isCaseUsed(int caseId) {
+        return !this.cases[caseId].isEmpty();
+    }
+
 
     public Player getWinner(){
 

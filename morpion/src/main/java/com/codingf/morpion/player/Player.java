@@ -1,6 +1,7 @@
 package com.codingf.morpion.player;
 
 import com.codingf.morpion.grid.Token;
+
 public class Player {
 
     //champ

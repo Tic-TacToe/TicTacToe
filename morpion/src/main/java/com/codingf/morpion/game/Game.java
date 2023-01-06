@@ -45,10 +45,17 @@ public class Game {
             input = Input.readInt(scan);
 
 
+            if (input == 10){
 
+                System.out.print("\033[H\033[2J");
+                System.out.flush();
+                System.exit(0);
+
+            }
             if (0 <= input && input<= 8){
                 break;
             }
+
 
         }
         return input;
@@ -64,15 +71,17 @@ public class Game {
             // Joue une partie
 
             // Demande au joueur s'il souhaite rejouer
-            System.out.print("Voulez-vous rejouer ? (o/n) ");
+            System.out.print("Voulez-vous rejouer ? (Y/N) ");
             String answer = scanner.nextLine();
 
-            if (answer.equals("n")) {
+            if (answer.equals("n") || answer.equals("N")) {
                 // Le joueur ne souhaite pas rejouer, on sort de la boucle
                 scanner.close();
                 System.exit(0);
-            } else if (!answer.equals("o")) {
+            } else if (answer.equals("y") || answer.equals("Y")) {
                 // La réponse du joueur n'est pas valide, on recommence
+                System.out.print("\033[H\033[2J");
+                System.out.flush();
                 Game game = new Game();
                 System.out.println("===========================================================================================================================================================");
                 System.out.println("║                                     _______         ______              ______                                                                          ║\n" +
@@ -86,6 +95,14 @@ public class Game {
                 System.out.println("Bonjour et bienvenue dans le fameux jeu Tic Tac Toe (ou Morpion pour les intimes).");
                 System.out.println("Le but est simple : remplire une ligne ou une colonne ou une diagonale avec son symbole ( X ou O)");
                 System.out.println("c'est le joureur X qui commence. Bonne chance!");
+                System.out.println("                             \n" +
+                        "                             \n" +
+                        "                             \n" +
+                        "                             \n" +
+                        "                             \n" +
+                        "                             \n" +
+                        "                             \n" +
+                        "                             ");
                 game.start();
             }
         }

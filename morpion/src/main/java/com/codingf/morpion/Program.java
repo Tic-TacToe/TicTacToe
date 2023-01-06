@@ -2,9 +2,13 @@ package com.codingf.morpion;
 
 import com.codingf.morpion.game.Game;
 
+import java.sql.SQLOutput;
+
 
 public class Program {
     public static void main(String[] args) {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
         // point d'entrée
 
         Game game = new Game();
@@ -19,7 +23,16 @@ public class Program {
 
         System.out.println("Bonjour et bienvenue dans le fameux jeu Tic Tac Toe (ou Morpion pour les intimes).");
         System.out.println("Le but est simple : remplire une ligne ou une colonne ou une diagonale avec son symbole ( X ou O)");
+        System.out.println("Vous pouvez quiter le jeu a tout moment en tapant le chifre 10");
         System.out.println("c'est le joureur X qui commence. Bonne chance!");
+        System.out.println("                             \n" +
+                "                             \n" +
+                "                             \n" +
+                "                             \n" +
+                "                             \n" +
+                "                             \n" +
+                "                             \n" +
+                "                             ");
         game.start();
 
 

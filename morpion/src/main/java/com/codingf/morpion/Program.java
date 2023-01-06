@@ -22,9 +22,9 @@ public class Program {
         System.out.println("===========================================================================================================================================================");
 
         System.out.println("Bonjour et bienvenue dans le fameux jeu Tic Tac Toe (ou Morpion pour les intimes).");
-        System.out.println("Le but est simple : remplire une ligne ou une colonne ou une diagonale avec son symbole ( X ou O)");
-        System.out.println("Vous pouvez quiter le jeu a tout moment en tapant le chifre 10");
-        System.out.println("c'est le joureur X qui commence. Bonne chance!");
+        System.out.println("Le but est simple : remplir une ligne ou une colonne ou une diagonale avec son symbole ( X  ou  O ).\n");
+        System.out.println("Vous pouvez quitter le jeu à tout moment en tapant le chiffre 10.\n");
+        System.out.println("C'est le joueur X qui commence. Bonne chance !");
         System.out.println("                             \n" +
                 "                             \n" +
                 "                             \n" +

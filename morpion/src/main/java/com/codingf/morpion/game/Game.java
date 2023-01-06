@@ -76,6 +76,8 @@ public class Game {
 
             if (answer.equals("n") || answer.equals("N")) {
                 // Le joueur ne souhaite pas rejouer, on sort de la boucle
+                System.out.print("\033[H\033[2J");
+                System.out.flush();
                 scanner.close();
                 System.exit(0);
             } else if (answer.equals("y") || answer.equals("Y")) {
